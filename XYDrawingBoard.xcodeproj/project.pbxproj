@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F93AAC3C1CB3946B00756CDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC3B1CB3946B00756CDF /* main.m */; };
+		F93AAC3F1CB3946B00756CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC3E1CB3946B00756CDF /* AppDelegate.m */; };
+		F93AAC421CB3946B00756CDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC411CB3946B00756CDF /* ViewController.m */; };
+		F93AAC471CB3946B00756CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93AAC461CB3946B00756CDF /* Assets.xcassets */; };
+		F93AAC4A1CB3946B00756CDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93AAC481CB3946B00756CDF /* LaunchScreen.storyboard */; };
+		F93AAC551CB3946B00756CDF /* XYDrawingBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC541CB3946B00756CDF /* XYDrawingBoardTests.m */; };
+		F93AAC601CB3946B00756CDF /* XYDrawingBoardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC5F1CB3946B00756CDF /* XYDrawingBoardUITests.m */; };
+		F93AAC731CB3970C00756CDF /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC721CB3970C00756CDF /* Board.m */; };
+		F93AAC761CB39B1B00756CDF /* BaseBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC751CB39B1B00756CDF /* BaseBrush.m */; };
+		F93AAC791CB39CD900756CDF /* PencilBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC781CB39CD900756CDF /* PencilBrush.m */; };
+		F93AAC7C1CB39F3400756CDF /* LineBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC7B1CB39F3400756CDF /* LineBrush.m */; };
+		F93AAC7F1CB39FE600756CDF /* DashLineBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC7E1CB39FE600756CDF /* DashLineBrush.m */; };
+		F93AAC821CB3A2D400756CDF /* RectangleBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC811CB3A2D400756CDF /* RectangleBrush.m */; };
+		F93AAC851CB3A39B00756CDF /* EllipseBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC841CB3A39B00756CDF /* EllipseBrush.m */; };
+		F93AAC881CB3A40600756CDF /* EraserBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC871CB3A40600756CDF /* EraserBrush.m */; };
+		F93AAC8B1CB3A55800756CDF /* DBUndoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC8A1CB3A55800756CDF /* DBUndoManager.m */; };
+		F93AAC8E1CB3AC0D00756CDF /* DBImageFault.m in Sources */ = {isa = PBXBuildFile; fileRef = F93AAC8D1CB3AC0D00756CDF /* DBImageFault.m */; };
+		F93AAC921CB3BBBF00756CDF /* button_undo.png in Resources */ = {isa = PBXBuildFile; fileRef = F93AAC911CB3BBBF00756CDF /* button_undo.png */; };
+		F93AAC941CB3BBD200756CDF /* button_redo.png in Resources */ = {isa = PBXBuildFile; fileRef = F93AAC931CB3BBD200756CDF /* button_redo.png */; };
+		F93AAC981CB3BF0E00756CDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93AAC971CB3BF0E00756CDF /* Main.storyboard */; };
+		F9539B461CB4B28A00555DF0 /* RGBColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F9539B451CB4B28A00555DF0 /* RGBColorPicker.m */; };
+		F9539B4C1CB4BAB100555DF0 /* PaintingBrushSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9539B4B1CB4BAB100555DF0 /* PaintingBrushSettingView.m */; };
+		F9539B4E1CB4BAC900555DF0 /* PaintingBrushSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9539B4D1CB4BAC900555DF0 /* PaintingBrushSettingView.xib */; };
+		F9EEAEB81CB4E7C500ADB795 /* BackgroundSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9EEAEB71CB4E7C500ADB795 /* BackgroundSettingsView.xib */; };
+		F9EEAEBB1CB4E7DD00ADB795 /* BackgroundSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EEAEBA1CB4E7DD00ADB795 /* BackgroundSettingsView.m */; };
+		F9EEAEBE1CB4E8B900ADB795 /* UIView+UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EEAEBD1CB4E8B900ADB795 /* UIView+UIViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F93AAC511CB3946B00756CDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F93AAC2F1CB3946B00756CDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F93AAC361CB3946B00756CDF;
+			remoteInfo = XYDrawingBoard;
+		};
+		F93AAC5C1CB3946B00756CDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F93AAC2F1CB3946B00756CDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F93AAC361CB3946B00756CDF;
+			remoteInfo = XYDrawingBoard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F93AAC371CB3946B00756CDF /* XYDrawingBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYDrawingBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93AAC3B1CB3946B00756CDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F93AAC3D1CB3946B00756CDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F93AAC3E1CB3946B00756CDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F93AAC401CB3946B00756CDF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F93AAC411CB3946B00756CDF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F93AAC461CB3946B00756CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F93AAC491CB3946B00756CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F93AAC4B1CB3946B00756CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93AAC501CB3946B00756CDF /* XYDrawingBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYDrawingBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93AAC541CB3946B00756CDF /* XYDrawingBoardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYDrawingBoardTests.m; sourceTree = "<group>"; };
+		F93AAC561CB3946B00756CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93AAC5B1CB3946B00756CDF /* XYDrawingBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYDrawingBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93AAC5F1CB3946B00756CDF /* XYDrawingBoardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYDrawingBoardUITests.m; sourceTree = "<group>"; };
+		F93AAC611CB3946B00756CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93AAC711CB3970C00756CDF /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		F93AAC721CB3970C00756CDF /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		F93AAC741CB39B1B00756CDF /* BaseBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBrush.h; sourceTree = "<group>"; };
+		F93AAC751CB39B1B00756CDF /* BaseBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseBrush.m; sourceTree = "<group>"; };
+		F93AAC771CB39CD900756CDF /* PencilBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PencilBrush.h; sourceTree = "<group>"; };
+		F93AAC781CB39CD900756CDF /* PencilBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PencilBrush.m; sourceTree = "<group>"; };
+		F93AAC7A1CB39F3400756CDF /* LineBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineBrush.h; sourceTree = "<group>"; };
+		F93AAC7B1CB39F3400756CDF /* LineBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineBrush.m; sourceTree = "<group>"; };
+		F93AAC7D1CB39FE600756CDF /* DashLineBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashLineBrush.h; sourceTree = "<group>"; };
+		F93AAC7E1CB39FE600756CDF /* DashLineBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashLineBrush.m; sourceTree = "<group>"; };
+		F93AAC801CB3A2D400756CDF /* RectangleBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectangleBrush.h; sourceTree = "<group>"; };
+		F93AAC811CB3A2D400756CDF /* RectangleBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectangleBrush.m; sourceTree = "<group>"; };
+		F93AAC831CB3A39B00756CDF /* EllipseBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EllipseBrush.h; sourceTree = "<group>"; };
+		F93AAC841CB3A39B00756CDF /* EllipseBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EllipseBrush.m; sourceTree = "<group>"; };
+		F93AAC861CB3A40600756CDF /* EraserBrush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EraserBrush.h; sourceTree = "<group>"; };
+		F93AAC871CB3A40600756CDF /* EraserBrush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EraserBrush.m; sourceTree = "<group>"; };
+		F93AAC891CB3A55800756CDF /* DBUndoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUndoManager.h; sourceTree = "<group>"; };
+		F93AAC8A1CB3A55800756CDF /* DBUndoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUndoManager.m; sourceTree = "<group>"; };
+		F93AAC8C1CB3AC0D00756CDF /* DBImageFault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBImageFault.h; sourceTree = "<group>"; };
+		F93AAC8D1CB3AC0D00756CDF /* DBImageFault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBImageFault.m; sourceTree = "<group>"; };
+		F93AAC911CB3BBBF00756CDF /* button_undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_undo.png; path = ../button_undo.png; sourceTree = "<group>"; };
+		F93AAC931CB3BBD200756CDF /* button_redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_redo.png; path = ../button_redo.png; sourceTree = "<group>"; };
+		F93AAC971CB3BF0E00756CDF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F9539B441CB4B28A00555DF0 /* RGBColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGBColorPicker.h; sourceTree = "<group>"; };
+		F9539B451CB4B28A00555DF0 /* RGBColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGBColorPicker.m; sourceTree = "<group>"; };
+		F9539B4A1CB4BAB100555DF0 /* PaintingBrushSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintingBrushSettingView.h; sourceTree = "<group>"; };
+		F9539B4B1CB4BAB100555DF0 /* PaintingBrushSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintingBrushSettingView.m; sourceTree = "<group>"; };
+		F9539B4D1CB4BAC900555DF0 /* PaintingBrushSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaintingBrushSettingView.xib; sourceTree = "<group>"; };
+		F9EEAEB71CB4E7C500ADB795 /* BackgroundSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundSettingsView.xib; sourceTree = "<group>"; };
+		F9EEAEB91CB4E7DD00ADB795 /* BackgroundSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundSettingsView.h; sourceTree = "<group>"; };
+		F9EEAEBA1CB4E7DD00ADB795 /* BackgroundSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundSettingsView.m; sourceTree = "<group>"; };
+		F9EEAEBC1CB4E8B900ADB795 /* UIView+UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewController.h"; sourceTree = "<group>"; };
+		F9EEAEBD1CB4E8B900ADB795 /* UIView+UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F93AAC341CB3946B00756CDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93AAC4D1CB3946B00756CDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93AAC581CB3946B00756CDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F93AAC2E1CB3946B00756CDF = {
+			isa = PBXGroup;
+			children = (
+				F93AAC391CB3946B00756CDF /* XYDrawingBoard */,
+				F93AAC531CB3946B00756CDF /* XYDrawingBoardTests */,
+				F93AAC5E1CB3946B00756CDF /* XYDrawingBoardUITests */,
+				F93AAC381CB3946B00756CDF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F93AAC381CB3946B00756CDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F93AAC371CB3946B00756CDF /* XYDrawingBoard.app */,
+				F93AAC501CB3946B00756CDF /* XYDrawingBoardTests.xctest */,
+				F93AAC5B1CB3946B00756CDF /* XYDrawingBoardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F93AAC391CB3946B00756CDF /* XYDrawingBoard */ = {
+			isa = PBXGroup;
+			children = (
+				F93AAC911CB3BBBF00756CDF /* button_undo.png */,
+				F93AAC931CB3BBD200756CDF /* button_redo.png */,
+				F93AAC701CB396CD00756CDF /* BackgroundSettingsView */,
+				F93AAC6F1CB396C000756CDF /* PaintingBrushSettingsView */,
+				F93AAC6E1CB396A000756CDF /* Brushes */,
+				F93AAC6D1CB3969600756CDF /* Base */,
+				F93AAC3D1CB3946B00756CDF /* AppDelegate.h */,
+				F93AAC3E1CB3946B00756CDF /* AppDelegate.m */,
+				F93AAC401CB3946B00756CDF /* ViewController.h */,
+				F93AAC411CB3946B00756CDF /* ViewController.m */,
+				F93AAC971CB3BF0E00756CDF /* Main.storyboard */,
+				F93AAC461CB3946B00756CDF /* Assets.xcassets */,
+				F93AAC481CB3946B00756CDF /* LaunchScreen.storyboard */,
+				F93AAC4B1CB3946B00756CDF /* Info.plist */,
+				F93AAC3A1CB3946B00756CDF /* Supporting Files */,
+			);
+			path = XYDrawingBoard;
+			sourceTree = "<group>";
+		};
+		F93AAC3A1CB3946B00756CDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F93AAC3B1CB3946B00756CDF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F93AAC531CB3946B00756CDF /* XYDrawingBoardTests */ = {
+			isa = PBXGroup;
+			children = (
+				F93AAC541CB3946B00756CDF /* XYDrawingBoardTests.m */,
+				F93AAC561CB3946B00756CDF /* Info.plist */,
+			);
+			path = XYDrawingBoardTests;
+			sourceTree = "<group>";
+		};
+		F93AAC5E1CB3946B00756CDF /* XYDrawingBoardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F93AAC5F1CB3946B00756CDF /* XYDrawingBoardUITests.m */,
+				F93AAC611CB3946B00756CDF /* Info.plist */,
+			);
+			path = XYDrawingBoardUITests;
+			sourceTree = "<group>";
+		};
+		F93AAC6D1CB3969600756CDF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F93AAC711CB3970C00756CDF /* Board.h */,
+				F93AAC721CB3970C00756CDF /* Board.m */,
+				F93AAC741CB39B1B00756CDF /* BaseBrush.h */,
+				F93AAC751CB39B1B00756CDF /* BaseBrush.m */,
+				F93AAC891CB3A55800756CDF /* DBUndoManager.h */,
+				F93AAC8A1CB3A55800756CDF /* DBUndoManager.m */,
+				F93AAC8C1CB3AC0D00756CDF /* DBImageFault.h */,
+				F93AAC8D1CB3AC0D00756CDF /* DBImageFault.m */,
+				F9539B441CB4B28A00555DF0 /* RGBColorPicker.h */,
+				F9539B451CB4B28A00555DF0 /* RGBColorPicker.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		F93AAC6E1CB396A000756CDF /* Brushes */ = {
+			isa = PBXGroup;
+			children = (
+				F93AAC771CB39CD900756CDF /* PencilBrush.h */,
+				F93AAC781CB39CD900756CDF /* PencilBrush.m */,
+				F93AAC7A1CB39F3400756CDF /* LineBrush.h */,
+				F93AAC7B1CB39F3400756CDF /* LineBrush.m */,
+				F93AAC7D1CB39FE600756CDF /* DashLineBrush.h */,
+				F93AAC7E1CB39FE600756CDF /* DashLineBrush.m */,
+				F93AAC801CB3A2D400756CDF /* RectangleBrush.h */,
+				F93AAC811CB3A2D400756CDF /* RectangleBrush.m */,
+				F93AAC831CB3A39B00756CDF /* EllipseBrush.h */,
+				F93AAC841CB3A39B00756CDF /* EllipseBrush.m */,
+				F93AAC861CB3A40600756CDF /* EraserBrush.h */,
+				F93AAC871CB3A40600756CDF /* EraserBrush.m */,
+			);
+			name = Brushes;
+			sourceTree = "<group>";
+		};
+		F93AAC6F1CB396C000756CDF /* PaintingBrushSettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				F9539B4A1CB4BAB100555DF0 /* PaintingBrushSettingView.h */,
+				F9539B4B1CB4BAB100555DF0 /* PaintingBrushSettingView.m */,
+				F9539B4D1CB4BAC900555DF0 /* PaintingBrushSettingView.xib */,
+			);
+			name = PaintingBrushSettingsView;
+			sourceTree = "<group>";
+		};
+		F93AAC701CB396CD00756CDF /* BackgroundSettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				F9EEAEBC1CB4E8B900ADB795 /* UIView+UIViewController.h */,
+				F9EEAEBD1CB4E8B900ADB795 /* UIView+UIViewController.m */,
+				F9EEAEB91CB4E7DD00ADB795 /* BackgroundSettingsView.h */,
+				F9EEAEBA1CB4E7DD00ADB795 /* BackgroundSettingsView.m */,
+				F9EEAEB71CB4E7C500ADB795 /* BackgroundSettingsView.xib */,
+			);
+			name = BackgroundSettingsView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F93AAC361CB3946B00756CDF /* XYDrawingBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93AAC641CB3946B00756CDF /* Build configuration list for PBXNativeTarget "XYDrawingBoard" */;
+			buildPhases = (
+				F93AAC331CB3946B00756CDF /* Sources */,
+				F93AAC341CB3946B00756CDF /* Frameworks */,
+				F93AAC351CB3946B00756CDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XYDrawingBoard;
+			productName = XYDrawingBoard;
+			productReference = F93AAC371CB3946B00756CDF /* XYDrawingBoard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F93AAC4F1CB3946B00756CDF /* XYDrawingBoardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93AAC671CB3946B00756CDF /* Build configuration list for PBXNativeTarget "XYDrawingBoardTests" */;
+			buildPhases = (
+				F93AAC4C1CB3946B00756CDF /* Sources */,
+				F93AAC4D1CB3946B00756CDF /* Frameworks */,
+				F93AAC4E1CB3946B00756CDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F93AAC521CB3946B00756CDF /* PBXTargetDependency */,
+			);
+			name = XYDrawingBoardTests;
+			productName = XYDrawingBoardTests;
+			productReference = F93AAC501CB3946B00756CDF /* XYDrawingBoardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F93AAC5A1CB3946B00756CDF /* XYDrawingBoardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93AAC6A1CB3946B00756CDF /* Build configuration list for PBXNativeTarget "XYDrawingBoardUITests" */;
+			buildPhases = (
+				F93AAC571CB3946B00756CDF /* Sources */,
+				F93AAC581CB3946B00756CDF /* Frameworks */,
+				F93AAC591CB3946B00756CDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F93AAC5D1CB3946B00756CDF /* PBXTargetDependency */,
+			);
+			name = XYDrawingBoardUITests;
+			productName = XYDrawingBoardUITests;
+			productReference = F93AAC5B1CB3946B00756CDF /* XYDrawingBoardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F93AAC2F1CB3946B00756CDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "何米颖大天才";
+				TargetAttributes = {
+					F93AAC361CB3946B00756CDF = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					F93AAC4F1CB3946B00756CDF = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = F93AAC361CB3946B00756CDF;
+					};
+					F93AAC5A1CB3946B00756CDF = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = F93AAC361CB3946B00756CDF;
+					};
+				};
+			};
+			buildConfigurationList = F93AAC321CB3946B00756CDF /* Build configuration list for PBXProject "XYDrawingBoard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F93AAC2E1CB3946B00756CDF;
+			productRefGroup = F93AAC381CB3946B00756CDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F93AAC361CB3946B00756CDF /* XYDrawingBoard */,
+				F93AAC4F1CB3946B00756CDF /* XYDrawingBoardTests */,
+				F93AAC5A1CB3946B00756CDF /* XYDrawingBoardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F93AAC351CB3946B00756CDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93AAC4A1CB3946B00756CDF /* LaunchScreen.storyboard in Resources */,
+				F93AAC981CB3BF0E00756CDF /* Main.storyboard in Resources */,
+				F93AAC941CB3BBD200756CDF /* button_redo.png in Resources */,
+				F93AAC471CB3946B00756CDF /* Assets.xcassets in Resources */,
+				F9539B4E1CB4BAC900555DF0 /* PaintingBrushSettingView.xib in Resources */,
+				F93AAC921CB3BBBF00756CDF /* button_undo.png in Resources */,
+				F9EEAEB81CB4E7C500ADB795 /* BackgroundSettingsView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93AAC4E1CB3946B00756CDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93AAC591CB3946B00756CDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F93AAC331CB3946B00756CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93AAC421CB3946B00756CDF /* ViewController.m in Sources */,
+				F93AAC3F1CB3946B00756CDF /* AppDelegate.m in Sources */,
+				F93AAC731CB3970C00756CDF /* Board.m in Sources */,
+				F93AAC851CB3A39B00756CDF /* EllipseBrush.m in Sources */,
+				F93AAC7C1CB39F3400756CDF /* LineBrush.m in Sources */,
+				F9539B461CB4B28A00555DF0 /* RGBColorPicker.m in Sources */,
+				F9EEAEBB1CB4E7DD00ADB795 /* BackgroundSettingsView.m in Sources */,
+				F93AAC821CB3A2D400756CDF /* RectangleBrush.m in Sources */,
+				F9EEAEBE1CB4E8B900ADB795 /* UIView+UIViewController.m in Sources */,
+				F93AAC3C1CB3946B00756CDF /* main.m in Sources */,
+				F93AAC761CB39B1B00756CDF /* BaseBrush.m in Sources */,
+				F93AAC8E1CB3AC0D00756CDF /* DBImageFault.m in Sources */,
+				F93AAC881CB3A40600756CDF /* EraserBrush.m in Sources */,
+				F93AAC8B1CB3A55800756CDF /* DBUndoManager.m in Sources */,
+				F9539B4C1CB4BAB100555DF0 /* PaintingBrushSettingView.m in Sources */,
+				F93AAC7F1CB39FE600756CDF /* DashLineBrush.m in Sources */,
+				F93AAC791CB39CD900756CDF /* PencilBrush.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93AAC4C1CB3946B00756CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93AAC551CB3946B00756CDF /* XYDrawingBoardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93AAC571CB3946B00756CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93AAC601CB3946B00756CDF /* XYDrawingBoardUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F93AAC521CB3946B00756CDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F93AAC361CB3946B00756CDF /* XYDrawingBoard */;
+			targetProxy = F93AAC511CB3946B00756CDF /* PBXContainerItemProxy */;
+		};
+		F93AAC5D1CB3946B00756CDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F93AAC361CB3946B00756CDF /* XYDrawingBoard */;
+			targetProxy = F93AAC5C1CB3946B00756CDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F93AAC481CB3946B00756CDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93AAC491CB3946B00756CDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F93AAC621CB3946B00756CDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F93AAC631CB3946B00756CDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F93AAC651CB3946B00756CDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XYDrawingBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tchmy.XYDrawingBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F93AAC661CB3946B00756CDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XYDrawingBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tchmy.XYDrawingBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F93AAC681CB3946B00756CDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = XYDrawingBoardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tchmy.XYDrawingBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XYDrawingBoard.app/XYDrawingBoard";
+			};
+			name = Debug;
+		};
+		F93AAC691CB3946B00756CDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = XYDrawingBoardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tchmy.XYDrawingBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XYDrawingBoard.app/XYDrawingBoard";
+			};
+			name = Release;
+		};
+		F93AAC6B1CB3946B00756CDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = XYDrawingBoardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tchmy.XYDrawingBoardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XYDrawingBoard;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F93AAC6C1CB3946B00756CDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = XYDrawingBoardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tchmy.XYDrawingBoardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XYDrawingBoard;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F93AAC321CB3946B00756CDF /* Build configuration list for PBXProject "XYDrawingBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93AAC621CB3946B00756CDF /* Debug */,
+				F93AAC631CB3946B00756CDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93AAC641CB3946B00756CDF /* Build configuration list for PBXNativeTarget "XYDrawingBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93AAC651CB3946B00756CDF /* Debug */,
+				F93AAC661CB3946B00756CDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93AAC671CB3946B00756CDF /* Build configuration list for PBXNativeTarget "XYDrawingBoardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93AAC681CB3946B00756CDF /* Debug */,
+				F93AAC691CB3946B00756CDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93AAC6A1CB3946B00756CDF /* Build configuration list for PBXNativeTarget "XYDrawingBoardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93AAC6B1CB3946B00756CDF /* Debug */,
+				F93AAC6C1CB3946B00756CDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F93AAC2F1CB3946B00756CDF /* Project object */;
+}
