@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaA-G5-CPh" customClass="Board">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO8-Wl-UCo" userLabel="undo">
+                                        <rect key="frame" x="42" y="94" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="kMI-LB-Dx7"/>
+                                            <constraint firstAttribute="height" constant="28" id="yEx-9k-rz6"/>
+                                        </constraints>
+                                        <state key="normal" image="button_undo.png">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ag6-Cp-n07"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B80-yL-uqH" userLabel="redo">
+                                        <rect key="frame" x="311" y="94" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="BR5-2z-qk9"/>
+                                            <constraint firstAttribute="width" constant="28" id="CwE-y8-U4z"/>
+                                        </constraints>
+                                        <state key="normal" image="button_redo.png">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="redo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pau-YF-hsw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="B80-yL-uqH" firstAttribute="top" secondItem="BaA-G5-CPh" secondAttribute="top" constant="94" id="9mu-oj-NJf"/>
+                                    <constraint firstAttribute="trailing" secondItem="B80-yL-uqH" secondAttribute="trailing" constant="44" id="EhV-2X-JbT"/>
+                                    <constraint firstItem="qO8-Wl-UCo" firstAttribute="leading" secondItem="BaA-G5-CPh" secondAttribute="leading" constant="42" id="kKt-NZ-SxX"/>
+                                    <constraint firstItem="B80-yL-uqH" firstAttribute="top" secondItem="qO8-Wl-UCo" secondAttribute="top" id="kYM-aU-1MY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vY7-06-cXW" userLabel="TopView">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="44"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZWS-8q-iiM">
+                                        <rect key="frame" x="20" y="8" width="343" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="TFN-d3-YmQ"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="铅笔"/>
+                                            <segment title="直尺"/>
+                                            <segment title="虚线"/>
+                                            <segment title="矩形"/>
+                                            <segment title="圆形"/>
+                                            <segment title="橡皮擦"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="switchBrush:" destination="BYZ-38-t0r" eventType="valueChanged" id="fw7-kC-Wjs"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="ZWS-8q-iiM" secondAttribute="centerY" id="aXT-iB-gLx"/>
+                                    <constraint firstAttribute="height" constant="44" id="iEB-RJ-wYV"/>
+                                    <constraint firstItem="ZWS-8q-iiM" firstAttribute="leading" secondItem="vY7-06-cXW" secondAttribute="leading" constant="20" id="lHY-2B-UCh"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZWS-8q-iiM" secondAttribute="trailing" constant="20" id="mQk-5Q-Ch6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVg-GX-3Ee">
+                                <rect key="frame" x="0.0" y="-5" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAF-qN-vbr">
+                                <rect key="frame" x="0.0" y="373" width="375" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="hd5-mh-RuA"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avh-mg-EOP">
+                                <rect key="frame" x="-4" y="623" width="383" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="e2V-JC-sp9"/>
+                                    <constraint firstAttribute="height" constant="44" id="g4b-pM-VhW"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="画笔设置" id="QLD-3b-MC3">
+                                        <connections>
+                                            <action selector="paintingBrushSetting:" destination="BYZ-38-t0r" id="jFp-GC-pw1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DsM-sx-dBf"/>
+                                    <barButtonItem title="背景设置" id="QcC-iY-Zgb">
+                                        <connections>
+                                            <action selector="backgourndSetting:" destination="BYZ-38-t0r" id="eg8-nx-p9l"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Let-fQ-UZ5"/>
+                                    <barButtonItem title="保存到图库" id="Mpz-yx-NvV">
+                                        <connections>
+                                            <action selector="saveToAlbum:" destination="BYZ-38-t0r" id="6n1-yq-AVB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="e2V-JC-sp9"/>
+                                    </mask>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BaA-G5-CPh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="71r-ke-F3A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="avh-mg-EOP" secondAttribute="trailing" constant="-20" id="7lD-gM-Whd"/>
+                            <constraint firstItem="avh-mg-EOP" firstAttribute="top" secondItem="NAF-qN-vbr" secondAttribute="bottom" id="8wm-R9-KoW"/>
+                            <constraint firstItem="avh-mg-EOP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="FSa-xr-sVN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BaA-G5-CPh" secondAttribute="bottom" id="Hy9-T3-fel"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BaA-G5-CPh" secondAttribute="trailing" constant="-20" id="M4q-rk-NVe"/>
+                            <constraint firstItem="BaA-G5-CPh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Neg-Df-nwn"/>
+                            <constraint firstAttribute="trailing" secondItem="NAF-qN-vbr" secondAttribute="trailing" id="Oi6-Y8-TMh"/>
+                            <constraint firstItem="avh-mg-EOP" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="X6i-dv-mQ0"/>
+                            <constraint firstItem="NAF-qN-vbr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X9a-ta-pxr"/>
+                            <constraint firstItem="BaA-G5-CPh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cyx-8T-uKe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vY7-06-cXW" secondAttribute="trailing" constant="-20" id="ern-1E-oiv"/>
+                            <constraint firstItem="vY7-06-cXW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="lzw-y7-lcT"/>
+                            <constraint firstItem="vY7-06-cXW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="q4g-x8-DiW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tVg-GX-3Ee"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="71r-ke-F3A"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="board" destination="BaA-G5-CPh" id="Os1-PV-Ngj"/>
+                        <outlet property="redoButton" destination="B80-yL-uqH" id="sgv-9b-iW8"/>
+                        <outlet property="settingBackgrounView" destination="NAF-qN-vbr" id="ypC-OT-QKX"/>
+                        <outlet property="toolBar" destination="avh-mg-EOP" id="2IT-5g-8ug"/>
+                        <outlet property="toolBarBottomLayoutConstraint" destination="X6i-dv-mQ0" id="aTV-HR-h74"/>
+                        <outlet property="topView" destination="vY7-06-cXW" id="bu8-lY-kYx"/>
+                        <outlet property="topViewTopLayoutConstraint" destination="lzw-y7-lcT" id="hOT-2y-FuV"/>
+                        <outlet property="undoButton" destination="qO8-Wl-UCo" id="ZzD-eG-O1z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197.59999999999999" y="279.31034482758622"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_redo.png" width="86" height="86"/>
+        <image name="button_undo.png" width="86" height="86"/>
+    </resources>
+</document>
